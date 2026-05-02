@@ -1,20 +1,18 @@
 import fetch from "node-fetch";
-import dotenv from "dotenv";
-import { buildPrompt } from "./prompt.js";
+import { env } from "../src/config/env.js";
+import { buildPrompt } from "../src/lib/prompt.js";
 import {
   createElementorDocument,
   resolveTemplateName,
   validateElementorDocument,
-} from "./elementor.js";
-import { landingPageContentSchema } from "./schema.js";
-
-dotenv.config();
+} from "../src/lib/elementor.js";
+import { landingPageContentSchema } from "../src/lib/schema.js";
 
 const prompt = process.argv[2] || "landing page simples para nutricionista";
 const model = process.argv[3] || "gpt-4o-mini";
 const template = process.argv[4] || "default";
 
-if (!process.env.OPENAI_API_KEY) {
+if (!env.openAiApiKey) {
   console.error("OPENAI_API_KEY nao encontrada.");
   process.exit(1);
 }
@@ -22,7 +20,7 @@ if (!process.env.OPENAI_API_KEY) {
 const response = await fetch("https://api.openai.com/v1/chat/completions", {
   method: "POST",
   headers: {
-    Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+    Authorization: `Bearer ${env.openAiApiKey}`,
     "Content-Type": "application/json",
   },
   body: JSON.stringify({

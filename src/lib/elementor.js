@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
-import { buildSimpleTemplate } from "./templates/simple.js";
-import { buildPremiumTemplate } from "./templates/premium.js";
-import { buildMinimalTemplate } from "./templates/minimal.js";
+import { buildSimpleTemplate } from "../templates/simple.js";
+import { buildPremiumTemplate } from "../templates/premium.js";
+import { buildMinimalTemplate } from "../templates/minimal.js";
 
 const allowedWidgets = new Set([
   "heading",

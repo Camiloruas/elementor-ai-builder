@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementor AI Builder - Gerador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Elementor AI Builder</h1>
+            <p>Gere landing pages profissionais para WordPress em segundos.</p>
+        </header>
+
+        <main>
+            <div class="form-group">
+                <label for="prompt">O que sua landing page deve ter?</label>
+                <textarea id="prompt" placeholder="Ex: Uma página para nutricionista focada em emagrecimento saudável, com depoimentos e FAQ..."></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="template">Escolha o Estilo</label>
+                    <select id="template">
+                        <option value="simple">Simples (Focado em Conversão)</option>
+                        <option value="premium">Premium (Visual Moderno)</option>
+                        <option value="minimal">Minimalista (Limpo e Direto)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button id="generateBtn" class="btn-primary">Gerar Página</button>
+                <button id="downloadBtn" class="btn-secondary" disabled>Baixar JSON</button>
+            </div>
+
+            <div id="statusArea" class="status-area hidden">
+                <div class="loader hidden"></div>
+                <p id="statusMessage"></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Elementor AI Builder - Ferramenta de Portfólio</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
