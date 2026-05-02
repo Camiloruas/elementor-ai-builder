@@ -6,15 +6,15 @@ Gerador de landing pages em JSON para importacao no Elementor do WordPress.
 
 ## O que foi feito
 
-- Corrigido erro de sintaxe em `prompt.js` causado por crases dentro de template string.
+- Corrigido erro de sintaxe em `src/lib/prompt.js` causado por crases dentro de template string.
 - Instalado `nodemon` e criado o script `npm run dev`.
 - Mudada a estrategia de geracao:
   - a OpenAI gera apenas o conteudo estruturado da landing page
   - o servidor monta o JSON final do Elementor localmente
 - Adicionado `response_format` com `json_schema` para reduzir respostas inconsistentes.
-- Criado `schema.js` para validar a estrutura do conteudo retornado pela OpenAI.
-- Criado `elementor.js` para montar e validar o documento final do Elementor.
-- Criados templates em `templates/`:
+- Criado `src/lib/schema.js` para validar a estrutura do conteudo retornado pela OpenAI.
+- Criado `src/lib/elementor.js` para montar e validar o documento final do Elementor.
+- Criados templates em `src/templates/`:
   - `simple`
   - `premium`
   - `minimal`
@@ -23,11 +23,19 @@ Gerador de landing pages em JSON para importacao no Elementor do WordPress.
 - Hero ganhou suporte a imagem.
 - Botoes ganharam link para `#oferta`.
 - Oferta foi fortalecida com copy extra em templates mais comerciais.
-- Criado `smoke-test.js` para testes curtos com pouco consumo de tokens.
+- Criado `scripts/smoke-test.js` para testes curtos com pouco consumo de tokens.
+- Criado `README.md` profissional para portfólio, focado em engenharia e sem padrões de IA.
+- Alterado endpoint `/generate` para retornar o JSON como download direto (`Content-Disposition: attachment`).
+- Reorganizada a arquitetura para padrao de backend Node:
+  - `src/config` para ambiente
+  - `src/services` para integracao OpenAI
+  - `src/routes` para endpoints HTTP
+  - `src/lib` para regras de negocio e schema
+  - `public` para frontend estatico
 
 ## Estado atual
 
-- Endpoint principal: `POST /generate`
+- Endpoint principal: `POST /generate` (retorna download de arquivo .json)
 - Parametros aceitos no body:
   - `prompt`
   - `model`
@@ -53,9 +61,12 @@ Gerador de landing pages em JSON para importacao no Elementor do WordPress.
 
 ## Arquivos principais
 
-- `server.js`: recebe requisicao, chama OpenAI, monta e valida JSON final.
-- `prompt.js`: instrui a OpenAI a gerar somente conteudo estruturado.
-- `schema.js`: schema JSON esperado da OpenAI.
-- `elementor.js`: montagem e validacao do documento do Elementor.
-- `templates/`: variacoes visuais do documento.
-- `smoke-test.js`: teste rapido de ponta a ponta.
+- `src/server.js`: inicializa o servidor HTTP.
+- `src/app.js`: configura middlewares e frontend estatico.
+- `src/routes/generate.route.js`: endpoint `/generate`.
+- `src/services/openai.service.js`: chamada e parsing da OpenAI.
+- `src/lib/prompt.js`: instrui a OpenAI a gerar somente conteudo estruturado.
+- `src/lib/schema.js`: schema JSON esperado da OpenAI.
+- `src/lib/elementor.js`: montagem e validacao do documento do Elementor.
+- `src/templates/`: variacoes visuais do documento.
+- `scripts/smoke-test.js`: teste rapido de ponta a ponta.
