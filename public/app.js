@@ -14,6 +14,8 @@ const downloadBtn = document.getElementById('downloadBtn');
 const statusArea = document.getElementById('statusArea');
 const statusMessage = document.getElementById('statusMessage');
 const loader = document.querySelector('.loader');
+const API_PORT = '3333';
+const API_BASE_URL = window.location.port === API_PORT ? '' : `http://localhost:${API_PORT}`;
 
 /**
  * Atualiza a interface de status
@@ -51,7 +53,7 @@ async function generatePage() {
     generateBtn.disabled = true;
 
     try {
-        const response = await fetch('/generate', {
+        const response = await fetch(`${API_BASE_URL}/generate`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -60,8 +62,19 @@ async function generatePage() {
         });
 
         if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.error || 'Erro ao processar requisição');
+            const errorText = await response.text();
+            let errorMessage = `Erro HTTP ${response.status}`;
+
+            try {
+                const errorData = JSON.parse(errorText);
+                errorMessage = errorData.error || errorMessage;
+            } catch {
+                if (errorText.trim()) {
+                    errorMessage = errorText.trim();
+                }
+            }
+
+            throw new Error(errorMessage);
         }
 
         const text = await response.text();
