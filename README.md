@@ -143,6 +143,31 @@ Exemplo com parâmetros:
 node scripts/smoke-test.js "landing page para clínica" "gpt-4o-mini" "simple"
 ```
 
+## Relatório de Testes
+
+Data da execução: 02 de maio de 2026
+
+Escopo executado:
+
+1. Teste de integração ponta a ponta com OpenAI e montagem de JSON Elementor.
+2. Teste de validação local do documento Elementor (`validateElementorDocument`).
+3. Teste de geração com variação de templates (`default`, `premium`, `minimal`).
+
+Comandos executados:
+
+```bash
+npm run smoke
+node scripts/smoke-test.js "landing page para consultoria de carreira" "gpt-4o-mini" "premium"
+node scripts/smoke-test.js "landing page para curso de ingles" "gpt-4o-mini" "minimal"
+node -e "import('./src/lib/elementor.js').then(m=>{const doc={title:'t',type:'page',version:'0.4',page_settings:[],content:[{id:'1',elType:'section',isInner:false,settings:{},elements:[{id:'2',elType:'column',isInner:false,settings:{_column_size:100},elements:[{id:'3',elType:'widget',widgetType:'heading',isInner:false,settings:{title:'ok'},elements:[]}]}]}]};const errs=m.validateElementorDocument(doc);console.log('validator_test',errs.length===0?'PASS':'FAIL',errs.length);}).catch(e=>{console.error(e);process.exit(1);});"
+```
+
+Resultado:
+
+1. `PASS` em todos os cenários executados.
+2. `validation.valid: true` nos testes de smoke com geração real.
+3. `validator_test PASS 0` no teste direto de validador estrutural.
+
 ## Competências Demonstradas
 
 1. Design de API com contrato claro.
