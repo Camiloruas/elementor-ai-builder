@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "elementor-ai-builder",
   "version": "1.0.0",
   "main": "src/server.js",
@@ -10,8 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Camiloruas <miloruas@gmail.com>",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "dotenv": "^17.4.2",
@@ -22,3 +22,4 @@
     "nodemon": "^3.1.14"
   }
 }
+
