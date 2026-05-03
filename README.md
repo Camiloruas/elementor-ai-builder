@@ -2,6 +2,13 @@
 
 Projeto de engenharia aplicado a marketing digital que transforma um briefing textual em um JSON pronto para importação no Elementor, com foco em confiabilidade, previsibilidade e velocidade de entrega.
 
+## Demonstração da Ferramenta
+
+Quer ver o fluxo completo funcionando na prática?
+
+1. Assista ao vídeo: [Ver demonstração](https://youtu.be/2eF25U2IRqg)
+2. Link curto para compartilhar: `youtu.be/2eF25U2IRqg`
+
 ## Visão Executiva
 
 O desafio central deste projeto é reduzir falhas comuns de soluções baseadas em IA para geração de páginas, principalmente erros de estrutura, inconsistência de conteúdo e baixa compatibilidade com o WordPress.
