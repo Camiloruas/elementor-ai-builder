@@ -185,6 +185,21 @@ Resultado:
 4. Modo multi idioma para geração de páginas internacionais.
 5. Persistência opcional de versões para auditoria de conteúdo.
 
+## Contribuição
+
+Contribuições são bem vindas para melhorias de arquitetura, experiência de uso, qualidade de código e cobertura de testes.
+
+Fluxo sugerido:
+
+1. Faça um fork do projeto.
+2. Crie uma branch para sua melhoria.
+3. Abra um Pull Request com descrição clara do problema e da solução.
+
 ## Licença
 
-ISC
+Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para todos os detalhes.
+
+## Autor
+
+Camiloruas
+Contato: miloruas@gmail.com
