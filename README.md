@@ -9,8 +9,6 @@ Projeto de engenharia aplicado a marketing digital que transforma um briefing te
 
 ### Demonstracao do Projeto
 
-Veja a demonstracao do projeto:
-
 [Veja demonstracao](https://www.youtube.com/watch?v=2eF25U2IRqg)
 
 ### Visão Executiva
@@ -426,4 +424,3 @@ This project is licensed under MIT. Check the `LICENSE` file for all details.
 
 Camiloruas  
 Contact: miloruas@gmail.com
-
