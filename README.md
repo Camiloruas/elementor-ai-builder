@@ -179,6 +179,12 @@ Escolha o idioma:
 
 Projeto de engenharia aplicado a marketing digital que transforma um briefing textual em um JSON pronto para importação no Elementor, com foco em confiabilidade, previsibilidade e velocidade de entrega.
 
+### Demonstracao do Projeto
+
+Veja o projeto funcionando na pratica:
+
+[Assistir no YouTube](https://www.youtube.com/watch?v=2eF25U2IRqg)
+
 ### Visão Executiva
 
 O desafio central deste projeto é reduzir falhas comuns de soluções baseadas em IA para geração de páginas, principalmente erros de estrutura, inconsistência de conteúdo e baixa compatibilidade com o WordPress.
@@ -384,6 +390,12 @@ Contato: miloruas@gmail.com
 ## English
 
 Engineering project applied to digital marketing that transforms a text brief into JSON ready for Elementor import, focused on reliability, predictability, and delivery speed.
+
+### Project Demo
+
+See the project in action:
+
+[Watch on YouTube](https://www.youtube.com/watch?v=2eF25U2IRqg)
 
 ### Executive Overview
 
