@@ -9,9 +9,9 @@ Projeto de engenharia aplicado a marketing digital que transforma um briefing te
 
 ### Demonstracao do Projeto
 
-Veja o projeto funcionando na pratica:
+Veja a demonstracao do projeto:
 
-[Assistir no YouTube](https://www.youtube.com/watch?v=2eF25U2IRqg)
+[Veja demonstracao](https://www.youtube.com/watch?v=2eF25U2IRqg)
 
 ### Visão Executiva
 
@@ -221,9 +221,9 @@ Engineering project applied to digital marketing that transforms a text brief in
 
 ### Project Demo
 
-See the project in action:
+See the project demonstration:
 
-[Watch on YouTube](https://www.youtube.com/watch?v=2eF25U2IRqg)
+[View demonstration](https://www.youtube.com/watch?v=2eF25U2IRqg)
 
 ### Executive Overview
 
